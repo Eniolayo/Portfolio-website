@@ -1,0 +1,13 @@
+Font 
+Cormorant Unicase...H1
+Mandali....H2 or H3
+Nunito...Paragraph
+/* 
+
+    font-family: 'Cormorant Unicase', serif;
+
+    font-family: 'Mandali', sans-serif;
+
+    font-family: 'Nunito', sans-serif;
+*/
+
