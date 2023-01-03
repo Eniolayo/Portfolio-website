@@ -127,6 +127,7 @@ a {
   align-items: center;
   width: var(--container);
   margin: 0 auto;
+  overflow:hidden;
 }
 .main-container {
   width: var(--container);
