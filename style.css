@@ -29,7 +29,7 @@ body {
     var(--clr-primary-200)
   );
   background: var(--bg);
-  overflow-x: hidden;
+    overflow-x:hidden;
 }
 .dark-mode :is(circle, fill) {
   --fill: var(--bg);
@@ -48,6 +48,7 @@ body {
   font-family: var(--ff-body);
   scrollbar-color: var(--clr-primary-150) transparent;
   scrollbar-width: thin;
+
 }
 h1,
 h2,
@@ -127,6 +128,7 @@ a {
   align-items: center;
   width: var(--container);
   margin: 0 auto;
+
 }
 .main-container {
   width: var(--container);
