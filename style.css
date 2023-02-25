@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?&family=Lora:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?&family=Lora:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@400;500;600;700&family=Hind Madurai:wght@400;500;600;700&family=Cormorant+Unicase:wght@400;500;600;700&family=Mandali:wght@400;500;600;700&display=swap");
 
 *,
 *::before,
@@ -45,7 +45,7 @@ body {
 html,
 body {
   height: 100%;
-  font-family: "Lora", serif;
+  font-family: var(--ff-body);
   scrollbar-color: var(--clr-primary-150) transparent;
   scrollbar-width: thin;
 }
@@ -54,7 +54,8 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Cormorant Unicase", serif;
+  /* font-family: "Montserrat", sans-serif; */
 }
 /*
 font-family: 'Hind Madurai', sans-serif;
@@ -211,6 +212,9 @@ h1 {
   width: 25px;
   display: inline;
 }
+.wave {
+  animation: waving 2s ease infinite alternate-reverse;
+}
 .greetings-intro {
   font-size: 1.7rem;
 }
@@ -232,9 +236,7 @@ h1 {
 .main-intro > h3 {
   margin: 1rem 0;
 }
-/* .main-intro > p{
 
-} */
 .get-in-touch {
   display: flex;
   gap: 1.2rem;
@@ -260,7 +262,9 @@ h1 {
   position: relative;
   animation: blob 30s ease infinite forwards;
 }
-
+.ayo-img img {
+  filter: saturate(2);
+}
 .blob {
   z-index: -1;
   display: block;
@@ -404,134 +408,6 @@ main {
 button + button {
   margin-left: 0.5rem;
 }
-@media only screen and (max-width: 889px) {
-  .main-about {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
-@media only screen and (max-width: 693px) {
-  .header-mobile-menu {
-    display: block;
-  }
-  .close-svg {
-    display: block;
-    width: 3rem;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    cursor: pointer;
-  }
-
-  .header-navigation {
-    position: absolute;
-    flex-direction: column;
-    top: 0;
-    right: 0;
-    align-items: center;
-    justify-content: center;
-    height: 90vh;
-    width: 70vw;
-    gap: 5rem;
-    will-change: transform;
-    transition: transform 300ms cubic-bezier(0.16, 0.43, 0.15, 0.86);
-    background-color: var(--clr-primary-250);
-    z-index: 5;
-    border-radius: 0 0 0 20rem;
-    transform: translateX(31rem);
-  }
-  nav ul {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-  }
-  .header-navigation.active {
-    transform: translateX(0);
-  }
-
-  .project-img {
-    order: 1;
-    width: 100%;
-    max-width: 100%;
-  }
-  .project-info {
-    order: 2;
-  }
-  .project-img {
-    width: 100%;
-  }
-  .project-info {
-    max-width: 100%;
-    margin-top: 1rem;
-    width: 100%;
-  }
-}
-@keyframes blob {
-  0% {
-    border-radius: 46% 54% 70% 30%/44% 56% 67% 33%;
-  }
-  5% {
-    border-radius: 57% 43% 65% 35%/44% 56% 45% 55%;
-  }
-  10% {
-    border-radius: 62% 38% 47% 53%/47% 53% 59% 41%;
-  }
-  15% {
-    border-radius: 67% 33% 48% 52%/58% 42% 69% 31%;
-  }
-  20% {
-    border-radius: 68% 32% 60% 40%/63% 37% 50% 50%;
-  }
-  25% {
-    border-radius: 61% 39% 64% 36%/41% 59% 48% 52%;
-  }
-  30% {
-    border-radius: 61% 39% 51% 49%/64% 36% 61% 39%;
-  }
-  35% {
-    border-radius: 54% 46% 49% 51%/56% 44% 52% 48%;
-  }
-  40% {
-    border-radius: 59% 41% 42% 58%/42% 58% 56% 44%;
-  }
-  45% {
-    border-radius: 70% 30% 63% 37%/57% 43% 68% 32%;
-  }
-  50% {
-    border-radius: 63% 37% 66% 34%/56% 44% 65% 35%;
-  }
-  55% {
-    border-radius: 42% 58% 69% 31%/41% 59% 62% 38%;
-  }
-  60% {
-    border-radius: 41% 59% 51% 49%/67% 33% 46% 54%;
-  }
-  65% {
-    border-radius: 55% 45% 49% 51%/47% 53% 42% 58%;
-  }
-  70% {
-    border-radius: 56% 44% 48% 52%/41% 59% 64% 36%;
-  }
-  75% {
-    border-radius: 46% 54% 43% 57%/50% 50% 48% 52%;
-  }
-  80% {
-    border-radius: 48% 52% 70% 30%/56% 44% 65% 35%;
-  }
-  85% {
-    border-radius: 66% 34% 67% 33%/62% 38% 59% 41%;
-  }
-  90% {
-    border-radius: 43% 57% 46% 54%/64% 36% 61% 39%;
-  }
-  95% {
-    border-radius: 63% 37% 68% 32%/57% 43% 41% 59%;
-  }
-  100% {
-    border-radius: 63% 37% 66% 34%/56% 44% 65% 35%;
-  }
-}
 
 .animatedSVG {
   width: 1.5rem;
@@ -554,7 +430,7 @@ button + button {
 .bg-animation > * {
   position: absolute;
   will-change: transform;
-  transition: all ease-in-out;
+  transition: all 250ms cubic-bezier(0.16, 0.43, 0.15, 0.86);
   stroke-width: 10px;
 }
 .animationBg1 {
@@ -634,4 +510,149 @@ footer .get-in-touch {
 }
 .scroll-to-top:hover .arrow-scroll__top {
   transform: translateY(0);
+}
+@media only screen and (max-width: 889px) {
+  .main-about {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 693px) {
+  .header-mobile-menu {
+    display: block;
+  }
+  .close-svg {
+    display: block;
+    width: 3rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+
+  .header-navigation {
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 70vw;
+    gap: 5rem;
+    /* will-change: opacity; */
+    /* transition: opacity 300ms cubic-bezier(0.16, 0.43, 0.15, 0.86); */
+    transition: transform 500ms cubic-bezier(0.16, 0.43, 0.15, 0.86);
+    background-color: var(--clr-primary-250);
+    z-index: 5;
+    /* opacity: 0; */
+    border-radius: 0 0 0 20rem;
+    /* transform: translateX(31rem); */
+    transform: translateY(-71rem);
+  }
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  .header-navigation.active {
+    transform: translateY(0);
+    /* opacity: 1; */
+  }
+
+  .project-img {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+  }
+  .project-info {
+    order: 2;
+  }
+  .project-img {
+    width: 100%;
+  }
+  .project-info {
+    max-width: 100%;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .bg-animation {
+    display: none;
+  }
+}
+
+@keyframes blob {
+  0% {
+    border-radius: 46% 54% 70% 30%/44% 56% 67% 33%;
+  }
+  5% {
+    border-radius: 57% 43% 65% 35%/44% 56% 45% 55%;
+  }
+  10% {
+    border-radius: 62% 38% 47% 53%/47% 53% 59% 41%;
+  }
+  15% {
+    border-radius: 67% 33% 48% 52%/58% 42% 69% 31%;
+  }
+  20% {
+    border-radius: 68% 32% 60% 40%/63% 37% 50% 50%;
+  }
+  25% {
+    border-radius: 61% 39% 64% 36%/41% 59% 48% 52%;
+  }
+  30% {
+    border-radius: 61% 39% 51% 49%/64% 36% 61% 39%;
+  }
+  35% {
+    border-radius: 54% 46% 49% 51%/56% 44% 52% 48%;
+  }
+  40% {
+    border-radius: 59% 41% 42% 58%/42% 58% 56% 44%;
+  }
+  45% {
+    border-radius: 70% 30% 63% 37%/57% 43% 68% 32%;
+  }
+  50% {
+    border-radius: 63% 37% 66% 34%/56% 44% 65% 35%;
+  }
+  55% {
+    border-radius: 42% 58% 69% 31%/41% 59% 62% 38%;
+  }
+  60% {
+    border-radius: 41% 59% 51% 49%/67% 33% 46% 54%;
+  }
+  65% {
+    border-radius: 55% 45% 49% 51%/47% 53% 42% 58%;
+  }
+  70% {
+    border-radius: 56% 44% 48% 52%/41% 59% 64% 36%;
+  }
+  75% {
+    border-radius: 46% 54% 43% 57%/50% 50% 48% 52%;
+  }
+  80% {
+    border-radius: 48% 52% 70% 30%/56% 44% 65% 35%;
+  }
+  85% {
+    border-radius: 66% 34% 67% 33%/62% 38% 59% 41%;
+  }
+  90% {
+    border-radius: 43% 57% 46% 54%/64% 36% 61% 39%;
+  }
+  95% {
+    border-radius: 63% 37% 68% 32%/57% 43% 41% 59%;
+  }
+  100% {
+    border-radius: 63% 37% 66% 34%/56% 44% 65% 35%;
+  }
+}
+@keyframes waving {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(50deg);
+  }
 }
