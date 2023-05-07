@@ -29,7 +29,7 @@ body {
     var(--clr-primary-200)
   );
   background: var(--bg);
-    overflow-x:hidden;
+  overflow-x: hidden;
 }
 .dark-mode :is(circle, fill) {
   --fill: var(--bg);
@@ -48,7 +48,6 @@ body {
   font-family: var(--ff-body);
   scrollbar-color: var(--clr-primary-150) transparent;
   scrollbar-width: thin;
-
 }
 h1,
 h2,
@@ -128,7 +127,6 @@ a {
   align-items: center;
   width: var(--container);
   margin: 0 auto;
-
 }
 .main-container {
   width: var(--container);
@@ -361,7 +359,7 @@ main {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 3rem 0;
+  margin: 8rem 0;
 }
 .project-card:nth-child(2n) {
   flex-direction: row-reverse;
@@ -385,6 +383,7 @@ main {
   display: flex;
   gap: 1rem;
   margin: 0.7rem 0;
+  flex-wrap: wrap;
 }
 .project-info_links {
   display: flex;
