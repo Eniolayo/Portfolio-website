@@ -10,10 +10,10 @@
 }
 
 :root {
-  --clr-primary-100: hsl(213, 50%, 32%);
-  --clr-primary-150: hsl(213, 42%, 60%);
-  --clr-primary-200: hsl(216, 45%, 77%);
-  --clr-primary-250: hsl(194, 18%, 72%);
+  --clr-primary-100: #294e7a;
+  --clr-primary-150: #6e95c4;
+  --clr-primary-200: #aabfdf;
+  --clr-primary-250: #abbec4;
   --container: min(90%, 80rem);
   --ff-title: "Cormorant Unicase", serif;
   --ff-body: "Mandali", sans-serif;
@@ -389,7 +389,7 @@ main {
   display: flex;
 }
 .project-info_links button {
-  background-color: var(--clr-primary-150);
+  background-color: var(--clr-primary-100);
   color: white;
   padding: 0.4rem 0.8rem;
   border-radius: 8px;
