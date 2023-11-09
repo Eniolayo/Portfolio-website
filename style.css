@@ -216,17 +216,17 @@ h1 {
   animation: waving 2s ease infinite alternate-reverse;
 }
 .greetings-intro {
-  font-size: 1.7rem;
+  font-size: 2.2rem;
 }
 .greetings-intro_name {
-  font-size: 3.2rem;
+  font-size: 4.2rem;
   font-family: "Mandali", sans-serif;
   margin: 1rem 0;
   line-height: 1;
 }
-.greetings-intro_name span {
+/* .greetings-intro_name span {
   font-size: 3rem;
-}
+} */
 .main-intro {
   height: 30rem;
   display: grid;
