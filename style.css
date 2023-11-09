@@ -218,6 +218,7 @@ h1 {
 .greetings-intro {
   font-size: 2.2rem;
 }
+
 .greetings-intro_name {
   font-size: 4.2rem;
   font-family: "Mandali", sans-serif;
@@ -227,6 +228,14 @@ h1 {
 /* .greetings-intro_name span {
   font-size: 3rem;
 } */
+@media (max-width: 750px) {
+  .greetings-intro {
+    font-size: 1.5rem;
+  }
+  .greetings-intro_name {
+    font-size: 3.4rem;
+  }
+}
 .main-intro {
   height: 30rem;
   display: grid;
