@@ -332,14 +332,14 @@ main {
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 2rem;
-  width: 70%;
+  width: 73%;
   margin: 1rem auto;
 }
 .main-skills ul li {
   display: grid;
   justify-items: center;
   align-content: center;
-  background: var(--clr-primary-250);
+  background: var(--clr-primary-200);
   color: var(--fill);
   font-size: 1.2rem;
   width: 10rem;
@@ -352,7 +352,8 @@ main {
   transform: scale(1.1);
 }
 .main-skills ul li img {
-  width: 90px;
+  width: 60px;
+  margin-top: 10px;
 }
 
 .project-card {
