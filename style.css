@@ -558,18 +558,32 @@ footer .get-in-touch {
     background-color: var(--clr-primary-250);
     z-index: 5;
     /* opacity: 0; */
-    border-radius: 0 0 0 20rem;
     /* transform: translateX(31rem); */
-    transform: translateY(-71rem);
+    /* transform: translateY(-71rem); */
+    transform-origin: top;
+    transform: scaleY(0);
   }
   nav ul {
     flex-direction: column;
     text-align: center;
     gap: 2rem;
+    opacity: 0;
+  }
+  .theme,
+  .close-svg {
+    opacity: 0;
   }
   .header-navigation.active {
-    transform: translateY(0);
-    /* opacity: 1; */
+    transform: scaleY(1);
+  }
+  .header-navigation.active .close-svg {
+    animation: showNavDetail 550ms forwards 550ms;
+  }
+  .header-navigation.active nav ul {
+    animation: showNavDetail 550ms forwards 650ms;
+  }
+  .header-navigation.active .theme {
+    animation: showNavDetail 550ms forwards 700ms;
   }
 
   .project-img {
@@ -592,7 +606,14 @@ footer .get-in-touch {
     display: none;
   }
 }
-
+@keyframes showNavDetail {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes blob {
   0% {
     border-radius: 46% 54% 70% 30%/44% 56% 67% 33%;
